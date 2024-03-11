@@ -13,7 +13,7 @@ class DemoController extends BaseController
 {
 
     /**
-     * @routeName Demo管理
+     * @routeName Demo管理<测试提交>
      * @routeDescription Demo管理
      */
     public function actionIndex()
