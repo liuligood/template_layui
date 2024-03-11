@@ -58,8 +58,6 @@ use function vierbergenlars\SemVer\Internal\valid;
         <div class="layui-col-md12">
         <div class="layui-col-md6"><label class="layui-form-label">权限:</label>
         <div id="test4" class="demo-transfer  " style="padding-left: 50px" ></div></div>
-        <label>店铺:</label>
-		<div id="test3" class="demo-transfer layui-col-md6 " style="padding-left: 50px" ></div></div>
         <div class="layui-form-item layui-col-md6">
             <div class="layui-input-block">
                 <input type="hidden" name="head_img" value="" id="headSrc">
@@ -124,28 +122,6 @@ var obj =("<?php echo ($q+$w);?>");
 value.push(obj);
 </script>
 <?php }$t+=1;}$q+=1;}}?>
-<?php $i = 0;
-
-$arr = array();
-foreach ($shop as $ar){
-	$q = 0; 
-	foreach($shop[$i]['children'] as $arr){
-	?>
-<script>
-var obj={"value":("<?php echo $shop[$i]['children'][$q]['value'];?>"),"title":("<?php echo $shop[$i]['children'][$q]['name'];?>")};
-data2.push(obj);
-</script>
-<?php  if(!(empty($shop[$i]['children'][$q]['selected']))){?>
-<script >
-var b= ("<?php echo $shop[$i]['children'][$q]['value'];?>")
-selected.push(b);
-console.log(selected);
-</script>
-<?php }
-	$q +=1; 
-	}
-	$i +=1;}
-?>
 <script>
     const adminUserUpdateUrl="<?=Url::to(['admin-user/update'])?>"
 </script>

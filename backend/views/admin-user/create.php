@@ -70,12 +70,6 @@ use yii\helpers\Url;
         </div>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">所属店铺</label>
-            <div class="layui-input-block">
-                <div id="shop_id" class="xm-select-demo"></div>
-            </div>
-        </div>
-        <div class="layui-form-item">
             <div class="layui-input-block">
                 <input type="hidden" name="head_img" value="" id="headSrc">
                 <button class="layui-btn" lay-submit="" lay-filter="createAdminUser">立即提交</button>
@@ -86,7 +80,6 @@ use yii\helpers\Url;
 </form>
 <script>
     const adminUserCreateUrl="<?=Url::to(['admin-user/create'])?>"
-    const shopArr ='<?=$shop?>';
 </script>
 <?=$this->registerJsFile("@adminPageJs/admin-user/create.js?".time())?>
 <?=$this->registerCssFile("@adminExtCss/layuiformSelects/dist/formSelects-v4.css")?>

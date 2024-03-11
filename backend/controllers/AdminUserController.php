@@ -98,28 +98,7 @@ class AdminUserController extends BaseController
             }
         }
         $assignData=Assignment::getAllItems(); //获取所有
-        $shop = Shop::find()->select('id,name,platform_type')->asArray()->all();
-        $shop = ArrayHelper::index($shop,'id','platform_type');
-        $shop_lists = [];
-        $shop_ids = [];
-        foreach ($shop as $key=>$value){
-            $children = [];
-            foreach ($value as $v){
-                $info = [
-                    'name' => $v['name'],
-                    'value' => $v['id']
-                ];
-                if(in_array($v['id'],$shop_ids)){
-                    $info['selected'] = true;
-                }
-                $children[] = $info;
-            }
-            $shop_lists[] = [
-                'name' => Base::$platform_maps[$key],
-                'children' => $children,
-            ];
-        }
-        return $this->render('create',['assignData'=>$assignData,'shop'=>json_encode($shop_lists)]);
+        return $this->render('create',['assignData'=>$assignData]);
     }
 
     /**
@@ -173,28 +152,7 @@ class AdminUserController extends BaseController
         }else{
 
             $all_role = Assignment::getAllItems();
-            $shop = Shop::find()->select('id,name,platform_type')->asArray()->all();
-            $shop = ArrayHelper::index($shop,'id','platform_type');
-            $shop_lists = [];
-            $shop_ids = explode(',',$adminModel['shop_id']);
-            foreach ($shop as $key=>$value){
-                $children = [];
-                foreach ($value as $v){
-                    $info = [
-                        'name' => $v['name'],
-                        'value' => $v['id']
-                    ];
-                    if(in_array($v['id'],$shop_ids)){
-                        $info['selected'] = true;
-                    }
-                    $children[] = $info;
-                }
-                $shop_lists[] = [
-                    'name' => Base::$platform_maps[$key],
-                    'children' => $children,
-                ];
-            }
-            return $this->render('update',['admin_user'=>$adminModel->toArray(),'assignData'=>$assignData,'all_role'=>$all_role,'shop'=>$shop_lists]);
+            return $this->render('update',['admin_user'=>$adminModel->toArray(),'assignData'=>$assignData,'all_role'=>$all_role]);
         }
     }
 
