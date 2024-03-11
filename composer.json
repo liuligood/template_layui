@@ -1,0 +1,52 @@
+{
+    "name": "yiisoft/yii2-app-advanced",
+    "description": "Yii 2 Advanced Project Template",
+    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5",
+        "yiisoft/yii2": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "jaeger/querylist": "^4.2",
+        "phpoffice/phpspreadsheet": "^1.12",
+        "mk-j/php_xlsxwriter": "^0.38.0",
+        "phpoffice/phpword": "^0.17.0",
+        "tecnickcom/tcpdf": "^6.3",
+        "moonlandsoft/yii2-phpexcel": "^2.0",
+        "hitmeister/api-sdk": "^1.41",
+        "qiniu/php-sdk": "^7.3",
+        "jaeger/querylist-puppeteer": "^4.0",
+        "yiisoft/yii2-redis": "^2.0",
+        "mirakl/sdk-php-shop": "^1.12",
+        "alibabacloud/alimt-20181012": "1.0.2",
+        "yiisoft/yii2-composer": "^2.0",
+        "automattic/woocommerce": "^3.1"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
